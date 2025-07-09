@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar{
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+header .nav-bar .logo img{
+    width: 100px;
+
+}
+
+.nav-bar .nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-bar .nav-menu .nav-link{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(20, 39, 74, 1);
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}
+
+.act{
+    text-decoration: underline;
+    color: white;
+}
+
+.ham{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-bar .ham .bar{
+    display: block;
+    width: 25px;
+    height: 5px;
+    background-color: rgba(224, 185, 115, 1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: -80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width:687px) {
+    .ham{
+        display: block;
+    }
+
+    .ham.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .ham.active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(14px);
+    }
+    .ham.active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-14px);
+    }
+
+    .nav-bar .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(20, 39, 74, 1);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    .rat{
+        margin: 30px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+
+    .nav-bar .nav-menu .nav-link{
+        color: white;
+    }
+  
+}
+
+#hero{
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding-bottom: 50px;
+}
+
+#hero .cont{
+    /* max-width: 100%;
+    height: auto; */
+    /* background-image: url(img/gabriel\ ghnassia\ A9h6OsAxTyQ\ unsplash.svg);
+    background-size: cover; */
+    /* background-position: ; */
+    /* background-repeat: no-repeat; */
+    /* background-color: red; */
+
+    width: 100%;
+    height: auto;
+    background-image: url(img/apartment-bed-bedroom-chair-271618\ 1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hero .cont .text{
+    padding-top: 250px;
+    padding-left: 200px;
+    /* width: 100%; */
+}
+#hero .cont .text .top{
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+#hero .cont .text .mid{
+    font-family: "EB Garamond", serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 100px;
+    letter-spacing: 7%;
+    line-height: 0.6;
+}
+#hero .cont .text span{
+    font-size: 50px;
+    color: white;
+    font-family: "EB Garamond", serif;
+    letter-spacing: 20px;
+    font-weight: 500;
+}
+#hero .cont .text .end{
+    color: white;
+    letter-spacing: 10%;
+    margin-bottom: 50px;
+    line-height: 1;
+}
+#hero .cont .button{
+    color: white;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+#hero .cont .button a{
+    color: white;
+    background-color: rgba(224, 185, 115, 1);
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#hero .cont .scroll{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+#hero .cont .scroll p{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#hero .cont .icon{
+    display: flex;
+    justify-content: center;
+}
+
+#hero .cont .icon a{
+    color: white;
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:842px) {
+    #hero .cont .text{
+        padding-top: 250px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #hero .cont .scroll{
+        text-align: center;
+    }
+
+    #hero .cont .text .mid{
+        font-size: 50px;
+        line-height: 0.6;
+    }
+
+    #hero .cont .text .top{
+        font-size: 15px;
+    }
+
+    #hero .cont .text span{
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+    #hero .cont .text .end{
+        font-size: 12px;
+    }
+}
+
+#room .text{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#room .text h2{
+    font-family: "EB Garamond", serif;
+    color: rgba(20, 39, 74, 1);
+
+}
+
+#room .text p{
+    color: rgba(20, 39, 74, 1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#room .img{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+#room .img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#room .text2{
+    width: 100%;
+    height: auto;
+    background-color: rgba(20, 39, 74, 1);
+    margin-top: -4px;
+    text-align: center;
+}
+
+#room .text2 p{
+    color: white;
+    font-size: 30px;
+}
+#room .button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(20, 39, 74, 1);
+    margin-top: -16px;
+}
+
+
+#room .button .bot{
+    color: rgba(20, 39, 74, 1);
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900px;
+}
+#room .button .bit{
+    background-color: rgba(224, 185, 115, 1);
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:600px) {
+    #room .text2 p{
+        font-size: 20px;
+    }
+}
+
+#testimonials{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#testimonials h2{
+    font-family: "EB Garamond", serif;
+    color: rgba(20, 39, 74, 1);
+    font-weight: 700;
+}
+
+#testimonials p{
+    color: rgba(20, 39, 74, 1);
+    font-weight: 500;
+}
+
+#testimonials i{
+    cursor: pointer;
+    font-size: 25px;
+    color: rgba(224, 185, 115, 1);
+}
+
+#footer .cont{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(20, 39, 74, 1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cont::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -35px;
+    left: 48.8%;
+    border-width: 17.5px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: rgba(20, 39, 74, 1);
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+#footer .cont .cont1  h2{
+    font-family: "EB Garamond", serif;
+    line-height: 0.7;
+    color: white;
+}
+#footer .cont .cont1  h6{
+    font-family: "Montserrat", sans-serif;
+    margin-left: 30px;
+    line-height: 0.7;
+    color: white;
+}
+#footer .cont .cont1  p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#footer .cont .cont2 p{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#footer .cont .cont3 p{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+#footer .cont .cont4 p{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#footer .cont .cont4 .email{
+    display: flex;
+    outline: 2px solid rgba(224, 185, 115, 1);
+    border-radius: 1px;
+}
+
+
+#footer .cont .cont4 .email a{
+    text-decoration: none;
+    color: rgba(20, 39, 74, 1);
+    background-color: rgba(224, 185, 115, 1);
+    padding: 8px 5px;
+    /* margin-left: -4px; */
+    /* border-radius: 5px; */
+}
+@media  screen and (max-width:400px) {
+    #footer .cont .cont1{
+        text-align: center;
+        padding: 0px 15px;
+    }
+
+    #footer .cont .cont2{
+        text-align: center;
+        padding: 0px 15px;
+    }
+
+    #footer .cont .cont3{
+        text-align: center;
+        padding: 0px 15px;
+    }
+    #footer .cont .cont4{
+        text-align: center;
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width:1033px) {
+    .cont::after{
+        left: 48.2%;
+    }
+}
+
+@media screen and (max-width:649px) {
+    .cont::after{
+        left: 47.8%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .cont::after{
+        left: 45.8%;
+    }
+}
