@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-section{
-    /* padding-bottom: 30px; */
-}
-
 .nav-bar{
     display: flex;
     background-color: transparent;
